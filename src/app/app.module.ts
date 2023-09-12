@@ -7,6 +7,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ProductComponent } from './components/product/product.component';
+import { SHadowItemDirective } from './Directives/shadow-item.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     NavbarComponent,
     FooterComponent,
     MainComponent,
-    SidebarComponent
+    SidebarComponent,
+    ProductComponent,
+    SHadowItemDirective
   ],
   imports: [
     BrowserModule,
