@@ -1,0 +1,58 @@
+.content-header {
+  background-color:var(--whiat-color);
+  box-shadow:0 4px 4px -4px rgba(0, 0, 0, .12);
+
+}
+
+.searchInput {
+  width: 500px;
+  border: 1px solid var(--gree-color);
+  border-radius: 4px;
+  align-items: center;
+}
+
+.form-control {
+  border: none;
+  color:var(--gree-color);
+}
+
+
+.form-control:focus {
+  box-shadow: none
+}
+
+.btn {
+  color: #fff;
+  background-color: #f68b1e;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn :active {
+  color: #fff;
+  background-color: var(--orange-color);
+  border: none;
+}
+
+.btn:focus {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), inset 0 0 0 2px #af6315;
+}
+
+.btn:hover {
+  background-color: var(--orange-color);
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+.nav-item{
+    font-size: 18px;
+}
+.nav-item:hover {
+
+  color: var(--orange-color);
+}

@@ -1,37 +1,36 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img [src]="storeData.Logo" alt="" class="w-25 ">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
+<div class="row justify-content-center p-3 content-header">
+  <div class="col-2 pt-2 ">
+    <div class="d-flex justify-content-evenly align-items-center">
+      <i class="fa-solid fa-bars"></i>
+      <a class="navbar-brand" routerLink="/home" style="width: 130px;">
+        <img [src]="storeData.Logo" alt="" class="img-fluid">
+      </a>
     </div>
   </div>
-</nav>
+  <div class="col-5">
+    <form class="d-flex" role="search">
+      <div class="d-flex me-2 searchInput ">
+        <i class="fa-solid fa-magnifying-glass ms-2" style="color: #a3a3a6;"></i>
+        <input class="form-control" type="text" placeholder=" Search products, brands and categories "
+          aria-label="Search">
+      </div>
+      <button class="btn" type="submit">SEARCH</button>
+    </form>
+  </div>
+  <div class="col-3 pt-2 ">
+    <ul class="d-flex  justify-content-evenly  nav-list">
+      <li class="nav-item d-flex align-items-center">
+        <i class="fa-regular fa-user me-2"></i>
+        <a class="nav-link " aria-current="page" routerLink="/products" routerLinkActive="active">Acount</a>
+      </li>
+      <li class="nav-item  d-flex align-items-center">
+        <i class="fa-regular fa-circle-question me-2"></i>
+        <a class="nav-link " aria-current="page" routerLink="/about" routerLinkActive="active">Help</a>
+      </li>
+      <li class="nav-item  d-flex align-items-center">
+        <i class="fa-solid fa-cart-shopping me-2"></i>
+        <a class="nav-link" aria-current="page" routerLink="/contact" routerLinkActive="active">Cart</a>
+      </li>
+    </ul>
+  </div>
+</div>

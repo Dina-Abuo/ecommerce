@@ -4,19 +4,28 @@
   <p>Thanks for purchasing from our Store <span style="font-weight: bold;"> {{ ClientName}} </span></p>
 </div>
 
-<h3 *ngIf="discount != discountEnum.dis3"> We offer an explicit discount of: <span>{{discount}} </span>  </h3>
-
-
-
+<h3 *ngIf="discount != discountEnum.dis3"> We offer an explicit discount of: <span>{{discount}} </span> </h3>
+<hr>
+<h3> {{creditCard |creditCard }} </h3>
+<h3>{{date |date }} </h3>
+<hr>
+<div class="mb-3">
+  <select class="form-select form-select-lg" name="" id="" [(ngModel)]="slectedCategroyID">
+    <option value="0">All</option>
+    <option *ngFor="let cat of categroy" [value]="cat.id">{{cat.name}}</option>
+  </select>
+  <h3>{{slectedCategroyID}}</h3>
+</div>
 
 <div class="row rounded pt-3 pb-3 shadow-sm" style="background-color: #fff;">
 
   <div class="col-md-2  " *ngFor="let prd of Products" SHadowItem="2"
     [ngStyle]="{'background-color': prd.quantity==1 ? 'yellow ' :  '#fff' } ">
-    <div class="m-1 p-1" >
-      <img [src]="prd.img" alt="" class="img-fluid mb-2 " style="height: 160px; ">
-      <p>{{prd.name}}</p>
-      <h6> EGP <span class="ms-1"> {{ prd.price }}</span> </h6>
+    <div class="m-1 p-1" *ngIf="slectedCategroyID==prd.cateogryID || slectedCategroyID==0">
+      <img [src]="prd.img" alt="" class="img-fluid mb-2 " style="height: 160px; " [routerLink]="['/products',prd.id]">
+      <p>{{prd.name |uppercase}}</p>
+      <!-- <h6> EGP <span class="ms-1"> {{ prd.price }}</span> </h6>-->
+      <h6> {{ prd.price|currency:'EGP' }} </h6>
 
       <div [ngSwitch]="prd.quantity">
         <p *ngSwitchCase="0"> lout of stock</p>
@@ -27,6 +36,8 @@
 
       <button class="btn btn-primary " style="width: 60px;" [disabled]="prd.quantity==0"
         (click)="prd.quantity = buy(prd.quantity)">Buy</button>
+
+
     </div>
   </div>
 

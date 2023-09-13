@@ -9,6 +9,12 @@ import { MainComponent } from './components/main/main.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProductComponent } from './components/product/product.component';
 import { SHadowItemDirective } from './Directives/shadow-item.directive';
+import { CreditCardPipe } from './Pipes/credit-card.pipe';
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { NotFond404Component } from './components/not-fond404/not-fond404.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +24,17 @@ import { SHadowItemDirective } from './Directives/shadow-item.directive';
     MainComponent,
     SidebarComponent,
     ProductComponent,
-    SHadowItemDirective
+    SHadowItemDirective,
+    CreditCardPipe,
+    HomeComponent,
+    AboutUsComponent,
+    ContactUsComponent,
+    NotFond404Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,62 @@
+.contentFooter {
+  background-color: #313133;
+  /* position:fixed;
+  bottom: 0; */
+  width: 100%;
+  color: var(--whiat-color);
+}
+
+.divBox {
+  border: 2px solid var(--whiat-color);
+  color: var(--whiat-color);
+  width: 120px;
+}
+
+.divBox:hover {
+  border: 2px solid var(--orange-color);
+  color: var(--orange-color);
+
+}
+
+.divIcon {
+  width: 55px;
+  height: 55px;
+  background-color: var(--orange-color);
+}
+
+.contentEmailInput {
+  position: relative;
+  color: var(--gree-color);
+  background-color: var(--whiat-color);
+
+}
+
+.contentEmailInput input {
+  outline: none;
+  border: none;
+}
+
+.contentEmailInput input:focus {
+  outline: none;
+  border: none;
+}
+
+.boxRdio {
+  border: 1px solid var(--whiat-color);
+}
+
+.boxRdio label {
+  margin-left: 10px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+
+.boxRdio input {
+  position: relative;
+  visibility: hidden;
+}
+
+.boxRdio label:active {
+  color: var(--orange-color);
+}
