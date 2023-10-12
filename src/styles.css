@@ -2,8 +2,16 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 * {
-  --whiat-color: #fff;
-  --gree-color: #a3a3a6;
-  --orange-color:#f68b1e;;
-
+  --white-color: #fff;
+  --body-color: #f1f1f2;
+  --gray-color: #a3a3a6;
+  --darck-gray--color: rgb(109, 104, 104);
+  --orange-color: #f68b1e;
+  --orange-color-light: #fc9e41;
+  --orange-color-hover:#fcdbb9;
+  --primary-color:#2573a3;
 }
+
+/* body {
+  background-color: var(--body-color);
+} */

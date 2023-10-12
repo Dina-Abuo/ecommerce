@@ -1,1 +1,32 @@
-<p>home works!</p>
+<app-slider></app-slider>
+
+<div class="row">
+  <div class="col-4 rounded p-3" style="position: relative; " *ngFor="let cat of categroy; let i = index "> <a
+      [routerLink]="['/grous-products',cat.id]"> <img src="assets/categroies/categroy{{i+1}}.png"
+        class="img-fluid rounded " alt="images"></a>
+    <span class="cateName"> {{cat.name}}</span>
+  </div>
+</div>
+
+<div class="row mt-sm-2 mb-sm-2 p-sm-4" *ngFor="let cat of categroy; let i = index">
+  <h2 class="cartegroyName mb-sm-2">{{cat.name}} </h2>
+  <ng-container *ngFor="let product of products">
+    <div class="productCard" *ngIf="product.cateogryID==cat.id ">
+      <div class="cardProduct rounded border">
+        <div class="imgProduct">
+          <a [routerLink]="['/products',product.id]">
+            <img src="{{product?.img}}" alt="" class="img-fluid">
+          </a>
+        </div>
+        <p class="productName">{{product?.name}} </p>
+        <h3 style="color: var(--orange-color);"> {{product?.price |currency:'EGP' }} </h3>
+        <div style="font-weight: 500;" [ngSwitch]="product.quantity">
+          <p *ngSwitchCase="0"> lout of stock</p>
+          <p *ngSwitchCase="1"> last one item</p>
+          <p *ngSwitchCase="2">last two item</p>
+          <p *ngSwitchDefault> in stock</p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

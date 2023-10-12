@@ -1,0 +1,61 @@
+<div>
+  <section class="section1 d-flex flex-column   justify-content-center  align-items-center mt-3 col-9  ">
+    <img class="-mvs " src="https://www.jumia.com.eg/assets_he/images/cart.668e6453.svg" height="100" width="100"
+      alt="">
+    <h5 class="mt-3">Your cart is empty!</h5>
+    <p class="mb-5">Browse our categories and discover our best deals!</p>
+
+    <div class="div-link-shopping d-flex align-items-center justify-content-center">
+      <a href="../index.html" class="link-shopping"> START SHOPPING</a>
+    </div>
+  </section>
+
+
+
+  <section class="col-9 mb-5 mt-3 " style=" margin: auto; box-sizing: border-box;">
+    <div class="row">
+      <div class="col-8 me-5 ms-3 rounded p-3" style="box-sizing:border-box ;  background-color: var(--whiat-color);">
+        <h4 class="border-bottom mb-2 pb-2">Cart(5)</h4>
+        <div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+              <div class="div-image">
+                <img src="" alt="product image" class="img-fluid">
+              </div>
+              <div>
+                <p> describation</p>
+                <p class="fw-bold"> quantity</p>
+              </div>
+            </div>
+            <div>
+              <h4 style="color: var(--orange-color-light);">price</h4>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <button class="btn-delete p-2 rounded"> <i class="fa-solid fa-trash me-3 "></i> REMOVE </button>
+            </div>
+            <div style="position: relative;">
+              <input type="button" value="-" class="minus" (click)=" minus(quantity.value)">
+              <input type="number" class="quantity" [value]="value" #quantity name="quantity" min="1" max="9" step="1">
+              <input type="button" value="+" class="plus" (click)=" plus(quantity.value)">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3 rounded total-price p-3">
+        <p style="margin: 0;">CART SUMMARY</p>
+        <div class="d-flex justify-content-between align-items-center border-top border-bottom  pt-2 pb-2">
+          <h6>Subtotal</h6>
+          <h5>price 1233 </h5>
+        </div>
+        <button class="checkout rounded w-100 mt-2 mb-2 "> CHECKOUT (EGP 222.00) </button>
+      </div>
+    </div>
+
+  </section>
+
+
+
+</div>

@@ -1,0 +1,25 @@
+.cardItem {
+  background-color: var(--whiat-color);
+  height: 400px;
+  text-align: center;
+}
+
+.div-image-product {
+  height: 60%;
+}
+
+.p-descripation {
+  height: 78px;
+  width: 90%;
+  overflow: hidden;
+  color: var(--darck-gray--color);
+}
+
+.h-price {
+  color: var(--orange-color-light);
+  height: 5%;
+}
+
+.conent-quantity {
+  height: 5%;
+}

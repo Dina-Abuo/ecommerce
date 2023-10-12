@@ -1,0 +1,120 @@
+ .price_slider {
+   margin-bottom: 20px;
+   position: relative;
+   height: 20px;
+   /* border: none;
+   background: none; */
+   cursor: pointer;
+ }
+
+ .ui-slider-range {
+   position: absolute;
+   top: 50%;
+   z-index: 1;
+   display: block;
+   margin-top: -1px;
+   height: 2px;
+   border: 0;
+   border-radius: 0;
+   background-image: none;
+   background-color: var(--primary-color);
+ }
+
+
+ .ui-slider-handle {
+   position: absolute;
+   top: 50%;
+   z-index: 2;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   margin-top: -15px;
+   margin-left: -15px;
+   width: 30px;
+   height: 30px;
+   outline: none;
+   border: none;
+   border-radius: 0;
+   background: none;
+   background-color: transparent !important;
+   cursor: ew-resize;
+ }
+
+ .price_slider_amount {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin-bottom: -10px;
+ }
+
+
+ .screen-reader-text {
+   clip: rect(1px, 1px, 1px, 1px);
+   word-wrap: normal !important;
+   border: 0;
+   -webkit-clip-path: inset(50%);
+   clip-path: inset(50%);
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   padding: 0;
+   position: absolute !important;
+   width: 1px;
+ }
+
+ input[type='email'],
+ input[type='date'],
+ input[type='search'],
+ input[type='number'],
+ input[type='text'],
+ input[type='tel'],
+ input[type='url'],
+ input[type='password'],
+ textarea,
+ select {
+   padding: 0 15px;
+   max-width: 100%;
+   width: 100%;
+   height: var(--wd-form-height);
+   border: var(--wd-form-brd-width) solid var(--wd-form-brd-color);
+   border-radius: var(--wd-form-brd-radius);
+   background-color: var(--wd-form-bg);
+   box-shadow: none;
+   color: var(--wd-form-color);
+   vertical-align: middle;
+   font-size: 14px;
+   transition: border-color .5s ease;
+ }
+
+
+ .screen-reader-text {
+   clip: rect(1px, 1px, 1px, 1px);
+   word-wrap: normal !important;
+   border: 0;
+   -webkit-clip-path: inset(50%);
+   clip-path: inset(50%);
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   padding: 0;
+   position: absolute !important;
+   width: 1px;
+ }
+
+ .price_slider_amount .button {
+   order: 2;
+   margin-bottom: 10px;
+   padding: 5px 14px;
+   min-height: 36px;
+   font-size: 12px;
+   border-radius: var(--btn-default-brd-radius);
+   color: var(--btn-default-color);
+   box-shadow: var(--btn-default-box-shadow);
+   background-color: var(--btn-default-bgcolor);
+   text-transform: var(--btn-default-transform, var(--btn-transform));
+   font-weight: var(--btn-default-font-weight, var(--btn-font-weight));
+   font-family: var(--btn-default-font-family, var(--btn-font-family));
+   font-style: var(--btn-default-font-style, var(--btn-font-style));
+ }

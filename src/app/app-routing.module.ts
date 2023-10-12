@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { AboutUsComponent } from './components/about-us/about-us.component';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
-import { ProductComponent } from './components/product/product.component';
-import { MainComponent } from './components/main/main.component';
+
+
 import { NotFond404Component } from './components/not-fond404/not-fond404.component';
+import { SingleProductComponent } from './components/single-product/single-product.component';
+import { AddToCartComponent } from './components/add-to-cart/add-to-cart.component';
+import { GroupsComponent } from './components/groups/groups.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutUsComponent },
-  { path: 'contact', component: ContactUsComponent },
-  { path: 'products', component: ProductComponent },
-  { path: 'products/:id', component: MainComponent },
+  { path: 'cart', component: AddToCartComponent },
+  { path: 'grous-products/:categroyID', component: GroupsComponent },
+  { path: 'products/:id', component: SingleProductComponent },
+  { path: 'login', component: LoginComponent },
   { path: '**', component: NotFond404Component },
 ];
 

@@ -1,14 +1,12 @@
 .contentFooter {
   background-color: #313133;
-  /* position:fixed;
-  bottom: 0; */
-  width: 100%;
-  color: var(--whiat-color);
+  color: var(--white-color);
+  height: 20vh;
 }
 
 .divBox {
-  border: 2px solid var(--whiat-color);
-  color: var(--whiat-color);
+  border: 2px solid var(--white-color);
+  color: var(--white-color);
   width: 120px;
 }
 
@@ -27,7 +25,7 @@
 .contentEmailInput {
   position: relative;
   color: var(--gree-color);
-  background-color: var(--whiat-color);
+  background-color: var(--white-color);
 
 }
 
@@ -42,7 +40,7 @@
 }
 
 .boxRdio {
-  border: 1px solid var(--whiat-color);
+  border: 1px solid var(--white-color);
 }
 
 .boxRdio label {

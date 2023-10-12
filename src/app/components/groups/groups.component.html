@@ -1,0 +1,27 @@
+<div class="row justify-content-around mt-5">
+  <div class="col-2" style=" background-color: #fff;">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-md-9">
+    <div class="row rounded">
+      <div class="col-md-3" *ngFor="let prd of productOfCatID">
+        <div class="cardItem mb-3 p-1 rounded border" SHadowItem="2"
+          [ngStyle]="{'opacity': prd.quantity==1 ? '0.4 ' :  '1' } ">
+          <div class="div-image-product mb-2">
+            <img [src]="prd.img" alt="" class="img-fluid" [routerLink]="['/products',prd.id]">
+          </div>
+          <div class="d-flex justify-content-center align-items-center ">
+            <p class="p-descripation">{{prd.name}} </p>
+          </div>
+          <h5 class="h-price"> {{ prd.price|currency:'EGP' }} </h5>
+          <div class="conent-quantity fw-bold" [ngSwitch]="prd.quantity">
+            <p *ngSwitchCase="0"> lout of stock</p>
+            <p *ngSwitchCase="1"> last one item</p>
+            <p *ngSwitchCase="2">last two item</p>
+            <p *ngSwitchDefault> in stock</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

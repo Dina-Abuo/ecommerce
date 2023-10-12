@@ -1,9 +1,25 @@
-<div class="p-2 rounded "  >
-  <div class="border-bottom">
-    <h6 class="pb-2 ">DELIVERY & RETURNS</h6>
-  </div>
-  <div class="border-bottom">
-    <p style="font-size: 13px; " >Express delivery in main cities</p>
-    <p> <a href="#"> Details</a></p>
-  </div>
+<div>
+  <form method="get">
+    <div>
+      <div class="price_slider">
+        <div class="ui-slider-range " style="left: 0%; width: 100%;"></div>
+        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
+        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
+      </div>
+      <div class="price_slider_amount" data-step="10">
+        <label class="screen-reader-text" for="min_price">Min price</label>
+        <input type="text" id="min_price" name="min_price" value="280" data-min="120" placeholder="Min price"
+          style="display: none;">
+        <label class="screen-reader-text" for="max_price">Max price</label>
+        <input type="text" id="max_price" name="max_price" value="1020" data-max="1900" placeholder="Max price"
+          style="display: none;">
+        <button type="submit" class="button">Filter</button>
+        <div class="price_label">
+          Price: <span class="from">120&nbsp;EGP</span> — <span class="to">1,900&nbsp;EGP</span>
+        </div>
+        <input type="hidden" name="_pjax" value=".main-page-wrapper">
+        <div class="clear"></div>
+      </div>
+    </div>
+  </form>
 </div>
