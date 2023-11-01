@@ -7,6 +7,7 @@ import { GroupsComponent } from './components/groups/groups.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUPComponent } from './components/sign-up/sign-up.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+import { SingleProductComponent } from './components/single-product/single-product.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'cart', component: AddToCartComponent },
       { path: 'grous-products/:categroyID', component: GroupsComponent },
-      { path: 'products/:id', component: LoginComponent },
+      { path: 'products/:id', component: SingleProductComponent },
+      { path: 'login', component: LoginComponent },
       { path: 'signUp', component: SignUPComponent },
     ]
   },
