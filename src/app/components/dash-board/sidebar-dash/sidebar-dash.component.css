@@ -1,0 +1,28 @@
+.sidebar {
+  background-color: var(--white-color);
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+#sidebarnav {
+  list-style: none;
+}
+
+.active {
+  background-color: var(--orange-color-light);
+  color: var(--white-color);
+}
+
+.sidebar-item a {
+  color: var(--color-font-dashboard);
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.sidebar-item a:hover {
+  color: var(--orange-color);
+}
+.sidebar-item a:active {
+  color: var(--white-color);
+}

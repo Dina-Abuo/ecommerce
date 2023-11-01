@@ -1,0 +1,70 @@
+<div class="div-left col-8 p-sm-5  mb-sm-5 mt-sm-5 rounded shadow">
+  <form [formGroup]="productFrom" class="login">
+    <div class="perant-input1 mb-sm-4">
+      <label for="name">Name</label>
+      <input id="name" class="inp rounded" type="text" placeholder="Enter Name of Product" formControlName="name"
+        [ngClass]="{
+        'is-invalid':productFrom.controls['name'].errors && productFrom.controls['name'].touched,
+        'is-valid':!productFrom.controls['name'].errors
+      }">
+      <div class="alert alert-danger"
+        *ngIf="productFrom.controls['name'].errors && productFrom.controls['name'].touched">
+        <span *ngIf="productFrom.controls['name'].errors?.['required']"> Product Name is required.</span>
+        <span *ngIf="productFrom.controls['name'].errors?.['minlength']"> Product Name must contains 3 char
+          lenght.</span>
+        <span *ngIf="productFrom.controls['name'].errors?.['maxlength']"> Product Name with in 50 char lenght.</span>
+      </div>
+    </div>
+    <div class="perant-input2 mb-5">
+      <label for="prict"> price </label>
+      <input id="prict" class="inp rounded" type="text" placeholder="Enter Price of Product" formControlName="price"
+        [ngClass]="{
+        'is-invalid':productFrom.controls['price'].errors && productFrom.controls['price'].touched,
+        'is-valid':!productFrom.controls['price'].errors
+      }">
+      <div class="alert alert-danger"
+        *ngIf="productFrom.controls['name'].errors && productFrom.controls['name'].touched">
+        <span *ngIf="productFrom.controls['price'].errors?.['required']"> Product Price is required.</span>
+        <span *ngIf="productFrom.controls['price'].errors?.['minlength']"> Product Price must contains 3 char
+          lenght.</span>
+        <span *ngIf="productFrom.controls['price'].errors?.['maxlength']"> Product Price with in 50 char lenght.</span>
+      </div>
+    </div>
+
+    <div class="perant-input2 mb-5">
+      <label for="quantity"> Quantity </label>
+      <input id="quantity" class="inp rounded" type="text" placeholder="Enter Quantity of Product">
+    </div>
+    <div class="perant-input2 mb-5">
+      <label for="image"> Image </label>
+      <input id="image" class="inp rounded" type="file">
+    </div>
+    <div class="perant-input2 mb-5">
+      <label for="description"> Description </label>
+      <textarea id="description" class="rounded form-control" formControlName="description" [ngClass]="{
+        'is-invalid':productFrom.controls['description'].errors && productFrom.controls['description'].touched,
+        'is-valid':!productFrom.controls['description'].errors
+      }">
+        </textarea>
+      <div class="alert alert-danger"
+        *ngIf="productFrom.controls['description'].errors && productFrom.controls['name'].touched">
+        <span *ngIf="productFrom.controls['description'].errors?.['required']"> Product Description is required.</span>
+        <span *ngIf="productFrom.controls['description'].errors?.['minlength']"> Product Description must contains 3
+          char
+          lenght.</span>
+        <span *ngIf="productFrom.controls['description'].errors?.['maxlength']"> Product Description with in 50 char
+          lenght.</span>
+      </div>
+    </div>
+    <div class="div-subm mt-5  ">
+      <input type="submit" class="rounded shadow" routerLink="/dashBoard/tableUsers" value="{{buttonText}}">
+    </div>
+  </form>
+
+
+
+
+
+
+
+</div>

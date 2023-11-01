@@ -1,3 +1,7 @@
+.active {
+  color: var(--orange-color);
+}
+
 .content-header {
   background-color: var(--white-color);
   box-shadow: 0 4px 4px -4px rgba(0, 0, 0, .12);

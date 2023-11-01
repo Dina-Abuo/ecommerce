@@ -2,16 +2,22 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   --white-color: #fff;
   --body-color: #f1f1f2;
   --gray-color: #a3a3a6;
   --darck-gray--color: rgb(109, 104, 104);
   --orange-color: #f68b1e;
   --orange-color-light: #fc9e41;
-  --orange-color-hover:#fcdbb9;
-  --primary-color:#2573a3;
+  --orange-color-hover: #fcdbb9;
+  --primary-color: #2573a3;
+  --color-font-dashboard: #596b7e;
+  --color-icon-dahboard: #a6b7bf;
+  --color-title-dashboard:#455a64;
 }
 
-/* body {
+body {
   background-color: var(--body-color);
-} */
+}

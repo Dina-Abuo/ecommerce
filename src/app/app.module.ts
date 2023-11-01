@@ -17,6 +17,9 @@ import { SingleProductComponent } from './components/single-product/single-produ
 import { AddToCartComponent } from './components/add-to-cart/add-to-cart.component';
 import { GroupsComponent } from './components/groups/groups.component';
 import { LoginComponent } from './components/login/login.component';
+import { SignUPComponent } from './components/sign-up/sign-up.component';
+import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +34,10 @@ import { LoginComponent } from './components/login/login.component';
     SingleProductComponent,
     AddToCartComponent,
     GroupsComponent,
-    LoginComponent
+    LoginComponent,
+    SignUPComponent,
+    MainLayoutComponent
+
   ],
   imports: [
     BrowserModule,

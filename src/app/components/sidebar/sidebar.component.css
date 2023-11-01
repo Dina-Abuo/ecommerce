@@ -1,9 +1,21 @@
- .price_slider {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* .price_slider {
    margin-bottom: 20px;
    position: relative;
    height: 20px;
-   /* border: none;
-   background: none; */
    cursor: pointer;
  }
 
@@ -117,4 +129,26 @@
    font-weight: var(--btn-default-font-weight, var(--btn-font-weight));
    font-family: var(--btn-default-font-family, var(--btn-font-family));
    font-style: var(--btn-default-font-style, var(--btn-font-style));
- }
+ } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

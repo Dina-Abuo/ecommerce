@@ -6,33 +6,32 @@
   </div>
   <div class="col-sm-6">
     <button type="button" class="btn btn-warning" (click)="goBack()">back</button>
-  <p class="des">
-    Dell Precision 3550 15.6” Mobile Workstation: Intel Core i7-10810U, 8GB, NVIDIA Quadro P520 2GB GPU, 512GB SSD
-    Used: 3
-    Months Warranty (Great Condition)
-  </p>
-  <div class="mb-4" [ngSwitch]="product?.quantity">
-    <h6 *ngSwitchCase="0"> <i class="fa-solid fa-xmark me-2 fs-5" style="color:red; "></i> lout of stock</h6>
-    <h6 *ngSwitchCase="1"> <i class="fa-solid fa-check me-2 fs-5" style="color: var(--orange-color);"></i> last one
-      item</h6>
-    <h6 *ngSwitchCase="2"><i class="fa-solid fa-check me-2 fs-5" style="color: var(--orange-color);"></i> last two
-      item</h6>
-    <div *ngSwitchDefault>
-      <h6 class="mb-2"> <i class="fa-solid fa-check me-2 fs-5" style="color: var(--orange-color);"></i> in stock</h6>
-      <div class="d-flex">
-        <div style="position: relative;">
-          <input type="button" value="-" class="minus" (click)=" minus(quantity.value)">
-          <input type="number" class="quantity" [value]="value" #quantity name="quantity" min="1" max="9" step="1">
-          <input type="button" value="+" class="plus" (click)=" plus(quantity.value)">
+    <p class="des">
+      Dell Precision 3550 15.6” Mobile Workstation: Intel Core i7-10810U, 8GB, NVIDIA Quadro P520 2GB GPU, 512GB SSD
+      Used: 3
+      Months Warranty (Great Condition)
+    </p>
+    <div class="mb-4" [ngSwitch]="product?.quantity">
+      <h6 *ngSwitchCase="0"> <i class="fa-solid fa-xmark me-2 fs-5" style="color:red; "></i> lout of stock</h6>
+      <h6 *ngSwitchCase="1"> <i class="fa-solid fa-check me-2 fs-5" style="color: var(--orange-color);"></i> last one
+        item</h6>
+      <h6 *ngSwitchCase="2"><i class="fa-solid fa-check me-2 fs-5" style="color: var(--orange-color);"></i> last two
+        item</h6>
+      <div *ngSwitchDefault>
+        <h6 class="mb-2"> <i class="fa-solid fa-check me-2 fs-5" style="color: var(--orange-color);"></i> in stock</h6>
+        <div class="d-flex">
+          <div style="position: relative;">
+            <input type="button" value="-" class="minus" (click)=" minus(quantity.value)">
+            <input type="number" class="quantity" [value]="value" #quantity name="quantity" min="1" max="9" step="1">
+            <input type="button" value="+" class="plus" (click)=" plus(quantity.value)">
+          </div>
+          <a  class="addToCart rounded ms-5" (click)="addToCart(product!)"> ADD TO CART </a>
         </div>
-        <a href="http://" class="" class="addToCart rounded ms-5"> ADD TO CART </a>
       </div>
     </div>
+    <h1 class="price pb-4 mb-4 border-bottom">{{product?.price}} </h1>
+    <h6 class="flex-wrap" style="width:75%;">Categories : <span class="attribute">{{ product?.name}}</span></h6>
+    <h6 class="flex-wrap" style="width:75%;">Brand : <span class="attribute"> Lenovo</span></h6>
+
   </div>
-  <h1 class="price pb-4 mb-4 border-bottom">{{product?.price}} </h1>
-
-  <h6 class="flex-wrap" style="width:75%;">Categories : <span class="attribute">{{ product?.name}}</span></h6>
-  <h6 class="flex-wrap" style="width:75%;">Brand : <span class="attribute"> Lenovo</span></h6>
-
-</div>
 </div>

@@ -52,6 +52,7 @@
 .addToCart {
   box-sizing: border-box;
   text-decoration: none;
+  cursor: pointer;
   font-size: 15px;
   padding: 10px;
   background-color: var(--orange-color);

@@ -1,0 +1,110 @@
+.div-perent {
+  background-color: var(--white-color);
+}
+
+.div-perent h4 {
+  color: var(--orange-color);
+  font-weight: 700;
+}
+
+.perent-input1,
+.perent-input2 {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 5px;
+  width: 47%;
+  height: 50px;
+}
+
+.perent-input1 input,
+.perent-input2 input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  padding: 15px;
+  font-size: 14px;
+  color: gray;
+}
+
+.perent-input2 input:focus-visible,
+.perent-input1 input:focus-visible {
+  outline-color: var(--orange-color);
+}
+
+.perent-input2 label,
+.perent-input1 label {
+  position: absolute;
+  top: -12px;
+  left: 15px;
+  font-size: 13px;
+  color: gray;
+  background-color: var(--white-color);
+}
+
+.perent-prefi {
+  position: relative;
+  width: 60px;
+  margin-left: 20px;
+  background-color: var(--white-color);
+}
+
+.perent-prefi p {
+  margin-left: 15px;
+  margin-top: 15px;
+  color: var(--color-blak);
+}
+
+.perent-input-number {
+  position: relative;
+  width: 35%;
+}
+
+.perent-input-number input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 50px;
+  padding: 15px;
+  font-size: 14px;
+  color: gray;
+}
+
+.perent-input-number input:focus-visible {
+  outline-color: var(--orange-color);
+}
+
+.perent-input-number label,
+.perent-prefi div {
+  position: absolute;
+  top: -12px;
+  left: 15px;
+  font-size: 13px;
+  color: gray;
+  background-color: var(--white-color);
+}
+
+/* ********************* */
+
+.div-subm {
+  width: 100%;
+  height: 50px;
+  background-color: var(--orange-color-light);
+  border-radius: 5px;
+
+}
+
+.div-subm .subm {
+  width: 100%;
+  height: 50px;
+  border: none;
+  color: var(--white-color);
+  background-color: var(--orange-color-light);
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.div-subm .subm:hover {
+  background-color: var(--orange-color);
+}
+

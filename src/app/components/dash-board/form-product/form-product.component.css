@@ -1,0 +1,41 @@
+.div-left {
+  margin: auto;
+  background-color: var(--white-color);
+}
+
+.div-left h4 {
+  text-align: center;
+  color: var(--orange-color);
+}
+
+.div-left .login {
+  width: 100%;
+}
+
+.perant-input1,
+.perant-input2 {
+  width: 100%;
+  position: relative;
+}
+
+.perant-input1 input,
+.perant-input2 input {
+  width: 100%;
+  background-color: var(--white-color);
+  border: 1px solid #ccc;
+  padding: 13px;
+}
+
+.perant-input1 label,
+.perant-input2 label {
+  color: gray;
+}
+
+.perant-input2 input:focus-visible,
+.perant-input1 input:focus-visible {
+  outline-color: var(--orange-color);
+}
+
+.perant-input2:focus-visible+label {
+  color: var(--orange-color);
+}

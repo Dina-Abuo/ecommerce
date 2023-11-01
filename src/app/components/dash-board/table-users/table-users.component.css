@@ -1,0 +1,19 @@
+.content-table {
+  width: 100%;
+}
+
+.card-title {
+  color: var(--color-title-dashboard);
+}
+
+.card-subtitle {
+  color: var(--color-font-dashboard);
+}
+
+.card-subtitle code {
+  color: var(--color-icon-dahboard);
+}
+
+.user-table tbody th td {
+  color: var(--color-font-dashboard);
+}

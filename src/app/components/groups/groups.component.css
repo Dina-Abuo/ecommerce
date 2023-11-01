@@ -6,6 +6,7 @@
 
 .div-image-product {
   height: 60%;
+  cursor: pointer;
 }
 
 .p-descripation {

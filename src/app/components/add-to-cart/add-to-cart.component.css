@@ -1,6 +1,6 @@
 .section1 {
   margin: auto;
-  background-color: var(--whiat-color);
+  background-color: var(--white-color);
   border: 1 solid #eee;
   border-radius: 5px;
   height: 350px;
@@ -20,23 +20,23 @@
 
 
 .link-shopping {
-  color: var(--whiat-color);
+  color: var(--white-color);
   text-decoration: none;
 }
 
 .link-shopping:hover {
-  color: var(--whiat-color);
+  color: var(--white-color);
 
 }
 
 .total-price {
-  background-color: var(--whiat-color);
+  background-color: var(--white-color);
   height: 160px;
 }
 
 .checkout {
   border: none;
-  color: var(--whiat-color);
+  color: var(--white-color);
   background-color: var(--orange-color-light);
   height: 50px;
   font-weight: 600;
@@ -48,7 +48,8 @@
 
 
 .div-image {
-  width: 70px;
+  width: 80px;
+
 }
 
 
@@ -58,7 +59,7 @@
 
 
 .btn-delete {
-  background-color: var(--whiat-color);
+  background-color: var(--white-color);
   color: var(--orange-color);
   border: none;
   font-weight: 600;

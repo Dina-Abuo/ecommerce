@@ -1,9 +1,10 @@
+<div class="container-fluid">
 <div class="row justify-content-center p-3  content-header">
   <div class="col-2 pt-2 ">
     <div class="d-flex justify-content-evenly align-items-center">
       <i class="fa-solid fa-bars"></i>
       <a class="navbar-brand" routerLink="/home" style="width: 130px;">
-        <img src="" alt="" class="img-fluid">
+        <img src="assets/Logo-jumia.png" alt="" class="img-fluid">
       </a>
     </div>
   </div>
@@ -17,20 +18,33 @@
       <button class="btn" type="submit">SEARCH</button>
     </form>
   </div>
-  <div class="col-3 pt-2 ">
+  <div [ngClass]="isUserLogged ?'col-3 pt-2' :'col-4 pt-2' ">
     <ul class="d-flex  justify-content-evenly  nav-list">
-      <li class="nav-item d-flex align-items-center">
-        <i class="fa-regular fa-user me-2"></i>
-        <a class="nav-link " aria-current="page" routerLink="/" routerLinkActive="active">Acount</a>
+      <li class="nav-item d-flex align-items-center" [hidden]="isUserLogged">
+        <a class="nav-link " [hidden]="isUserLogged" aria-current="page" routerLink="/signUp" routerLinkActive="active">
+          <i class="fa-solid fa-user-plus  me-1"></i>
+          Sing up</a>
+      </li>
+      <li class="nav-item  d-flex align-items-center" [hidden]="isUserLogged">
+        <a class="nav-link" [hidden]="isUserLogged" aria-current="page" routerLink="/login" routerLinkActive="active">
+          <i class="fa-solid fa-arrow-right-to-bracket me-1"></i>
+          Login</a>
+      </li>
+      <li class="nav-item d-flex align-items-center" [hidden]="!isUserLogged">
+        <a class="nav-link " (click)="logout()" [hidden]="!isUserLogged" aria-current="page" routerLink="/logout"
+          routerLinkActive="active">
+          <i class="fa-solid fa-arrow-right-to-bracket me-1"></i>
+          Logout</a>
       </li>
       <li class="nav-item  d-flex align-items-center">
-        <i class="fa-regular fa-circle-question me-2"></i>
-        <a class="nav-link " aria-current="page" routerLink="/" routerLinkActive="active">Help</a>
+        <a class="nav-link " aria-current="page" routerLink="/dashBoard" routerLinkActive="active">
+          DashBoard</a>
       </li>
       <li class="nav-item  d-flex align-items-center">
-        <i class="fa-solid fa-cart-shopping me-2"></i>
-        <a class="nav-link" aria-current="page" routerLink="/cart" routerLinkActive="active">Cart</a>
+        <a class="nav-link" aria-current="page" routerLink="/cart" routerLinkActive="active">
+          <i class="fa-solid fa-cart-shopping me-1"></i>Cart</a>
       </li>
     </ul>
   </div>
+</div>
 </div>
