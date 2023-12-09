@@ -1,3 +1,55 @@
+.content-sidber {
+  position: sticky;
+  top: 10px;
+}
+
+.content-brands .form-brands p {
+  font-size: large;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.content-brands .form-brands p:hover,
+.content-brands .form-brands label:hover {
+  color: var(--orange-color);
+}
+
+input[type=checkbox] {
+  /* accent-color:  #C70039;   */
+  display: none;
+}
+
+.content-brands .form-brands label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+}
+
+label:before {
+  content: "";
+  display: inline-block;
+  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #e2e2e2;
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+
+input[type=checkbox]:checked+label:before {
+  content: "\2713";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--orange-color);
+  text-align: center;
+  line-height: 12px;
+}
 
 
 
@@ -12,7 +64,13 @@
 
 
 
- /* .price_slider {
+
+
+
+
+
+/* 
+.price_slider {
    margin-bottom: 20px;
    position: relative;
    height: 20px;
@@ -130,25 +188,3 @@
    font-family: var(--btn-default-font-family, var(--btn-font-family));
    font-style: var(--btn-default-font-style, var(--btn-font-style));
  } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
