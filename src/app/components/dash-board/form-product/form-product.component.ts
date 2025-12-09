@@ -12,7 +12,7 @@ export class FormProductComponent implements OnInit {
   productFrom: FormGroup;
   productID: string | null = null;
   buttonText: string = 'Create Product'
-  constructor(private FormBiulder: FormBuilder,
+  constructor(private FormBuilder: FormBuilder,
     private router: Router,
     private activatedRoute: ActivatedRoute) {
   }
@@ -27,7 +27,7 @@ export class FormProductComponent implements OnInit {
   }
 
   createProductFrom() {
-    this.productFrom = this.FormBiulder.group({
+    this.productFrom = this.FormBuilder.group({
       'name': ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(50)])],
       'description': ['', Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(500)])],
       'price': ['', Validators.compose([Validators.required, Validators.minLength(1), Validators.maxLength(8)])]

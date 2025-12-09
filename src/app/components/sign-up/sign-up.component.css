@@ -1,14 +1,14 @@
-.div-perent {
+.div-parent {
   background-color: var(--white-color);
 }
 
-.div-perent h4 {
+.div-parent h4 {
   color: var(--orange-color);
   font-weight: 700;
 }
 
-.perent-input1,
-.perent-input2 {
+.parent-input1,
+.parent-input2 {
   box-sizing: border-box;
   position: relative;
   border-radius: 5px;
@@ -16,8 +16,8 @@
   height: 50px;
 }
 
-.perent-input1 input,
-.perent-input2 input {
+.parent-input1 input,
+.parent-input2 input {
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -27,13 +27,13 @@
   color: gray;
 }
 
-.perent-input2 input:focus-visible,
-.perent-input1 input:focus-visible {
+.parent-input2 input:focus-visible,
+.parent-input1 input:focus-visible {
   outline-color: var(--orange-color);
 }
 
-.perent-input2 label,
-.perent-input1 label {
+.parent-input2 label,
+.parent-input1 label {
   position: absolute;
   top: -12px;
   left: 15px;
@@ -42,25 +42,25 @@
   background-color: var(--white-color);
 }
 
-.perent-prefi {
+.parent-prefi {
   position: relative;
   width: 60px;
   margin-left: 20px;
   background-color: var(--white-color);
 }
 
-.perent-prefi p {
+.parent-prefi p {
   margin-left: 15px;
   margin-top: 15px;
   color: var(--color-blak);
 }
 
-.perent-input-number {
+.parent-input-number {
   position: relative;
   width: 35%;
 }
 
-.perent-input-number input {
+.parent-input-number input {
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -70,12 +70,12 @@
   color: gray;
 }
 
-.perent-input-number input:focus-visible {
+.parent-input-number input:focus-visible {
   outline-color: var(--orange-color);
 }
 
-.perent-input-number label,
-.perent-prefi div {
+.parent-input-number label,
+.parent-prefi div {
   position: absolute;
   top: -12px;
   left: 15px;
@@ -91,7 +91,6 @@
   height: 50px;
   background-color: var(--orange-color-light);
   border-radius: 5px;
-
 }
 
 .div-subm .subm {
@@ -108,3 +107,20 @@
   background-color: var(--orange-color);
 }
 
+.error-msg {
+  margin: 4px 0 0 5px;
+  font-size: 13px;
+  color: #d9534f;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(-5px);
+  animation: fadeSlideIn 0.25s forwards ease-out;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

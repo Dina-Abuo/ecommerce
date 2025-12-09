@@ -10,16 +10,15 @@ import { ProductsServiceService } from 'src/app/Service/products-service.service
 })
 export class GroupsComponent implements OnInit {
   productOfCatID: IProduct[] = [];
-  categroyID: number = 0
-  constructor(private ProductFromVerice: ProductsServiceService, private router: ActivatedRoute) {
+  categoryID: number = 0
+  constructor(private ProductFromService: ProductsServiceService, private router: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    this.categroyID = (this.router.snapshot.paramMap.get('categroyID')) ? Number(
-      this.router.snapshot.paramMap.get('categroyID')
+    this.categoryID = (this.router.snapshot.paramMap.get('categoryID')) ? Number(
+      this.router.snapshot.paramMap.get('categoryID')
     ) : 0
-    this.productOfCatID = this.ProductFromVerice.getProductsByCatI(this.categroyID)
-
+    this.productOfCatID = this.ProductFromService.getProductsByCatI(this.categoryID)    
   }
 
 }

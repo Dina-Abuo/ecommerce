@@ -1,21 +1,24 @@
-<div class="div-left col-lg-4   col-sm-5  p-sm-3  mb-sm-5 mt-sm-5 rounded shadow">
-  <h4 class="mb-sm-4"> Login </h4>
-  <form action="/home" method="post" class="login">
-    <div class="perant-input1 mb-sm-4">
-      <label for="email">E-mail</label>
-      <input id="email" class="inp rounded" type="email" placeholder="Enter your E-mail ">
-    </div>
-    <div class="perant-input2 mb-5">
-      <label for="password"> Password </label>
-      <input id="password" class="inp rounded" type="password" placeholder="Enter your Passwoer ">
-    </div>
-    <div class="div-subm mt-5  ">
-      <button type="submit" class="rounded shadow" (click)="login()"> <i class="fa-solid fa-envelope "></i> LOGIN
-      </button>
-    </div>
-    <div class="div-signup mt-3  shadow rounded ">
-      <a routerLink="/signUp" class="mt-2"> SIGN UP</a>
-    </div>
-  </form>
-  <p class="mt-4"><a routerLink="/home">Back Home </a></p>
-</div>
+<section class="d-flex align-items-center">
+  <div class=" login-div col-11  col-lg-4  p-3 rounded shadow">
+    <h4 class="mb-4"> Login </h4>
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="login-form">
+      <div class="parent-input1 mb-4">
+        <label for="email">E-mail</label>
+        <input id="email" class="rounded" type="email" placeholder="Enter your E-mail " formControlName="email">
+      </div>
+      <div class="parent-input2 mb-5">
+        <label for="password"> Password </label>
+        <input id="password" class="rounded" type="password" placeholder="Enter your Password "
+          formControlName="password">
+      </div>
+      <div class="div-subm mt-5  ">
+        <button type="submit" class="rounded shadow"> <i class="fa-solid fa-envelope "></i> LOGIN
+        </button>
+      </div>
+      <div class="div-signUp mt-3  shadow rounded ">
+        <a routerLink="/signUp" class="mt-2"> SIGN UP</a>
+      </div>
+    </form>
+    <p class="mt-4"><a routerLink="/home">Back Home </a></p>
+  </div>
+</section>

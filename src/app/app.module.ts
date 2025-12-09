@@ -8,7 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SHadowItemDirective } from './Directives/shadow-item.directive';
 import { CreditCardPipe } from './Pipes/credit-card.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { NotFond404Component } from './components/not-fond404/not-fond404.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -36,17 +36,17 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
     GroupsComponent,
     LoginComponent,
     SignUPComponent,
-    MainLayoutComponent
-
+    MainLayoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

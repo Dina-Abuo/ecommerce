@@ -1,17 +1,20 @@
-<div class="row p-4" style="margin-top: 50px;">
+<div class="row p-4" style="margin-top: 50px;" *ngIf="product">
   <div class="col-sm-5">
     <div class="div-image">
-      <img src="{{product?.img}}" alt=" " class="img-fluid">
+      <img src="{{product.img}}" alt=" " class="img-fluid">
     </div>
   </div>
   <div class="col-sm-6">
-    <button type="button" class="btn btn-warning" (click)="goBack()">back</button>
-    <p class="des">
+    <button type="button" class="btn" [routerLink]="'/products/'+(product.id -1)">previous</button>
+    <button type="button" class="btn btn-warning mx-4" (click)="goBack()">back</button>
+    <button type="button" class="btn" [routerLink]="'/products/'+(product.id +1)">next </button>
+
+    <p class="des mt-5">
       Dell Precision 3550 15.6” Mobile Workstation: Intel Core i7-10810U, 8GB, NVIDIA Quadro P520 2GB GPU, 512GB SSD
       Used: 3
       Months Warranty (Great Condition)
     </p>
-    <div class="mb-4" [ngSwitch]="product?.quantity">
+    <div class="mb-4" [ngSwitch]="product.quantity">
       <h6 *ngSwitchCase="0"> <i class="fa-solid fa-xmark me-2 fs-5" style="color:red; "></i> lout of stock</h6>
       <h6 *ngSwitchCase="1"> <i class="fa-solid fa-check me-2 fs-5" style="color: var(--orange-color);"></i> last one
         item</h6>
@@ -25,12 +28,12 @@
             <input type="number" class="quantity" [value]="value" #quantity name="quantity" min="1" max="9" step="1">
             <input type="button" value="+" class="plus" (click)=" plus(quantity.value)">
           </div>
-          <a  class="addToCart rounded ms-5" (click)="addToCart(product!)"> ADD TO CART </a>
+          <a class="addToCart rounded ms-5" (click)="addToCart(product!)"> ADD TO CART </a>
         </div>
       </div>
     </div>
-    <h1 class="price pb-4 mb-4 border-bottom">{{product?.price}} </h1>
-    <h6 class="flex-wrap" style="width:75%;">Categories : <span class="attribute">{{ product?.name}}</span></h6>
+    <h1 class="price pb-4 mb-4 border-bottom">{{product.price}} </h1>
+    <h6 class="flex-wrap" style="width:75%;">Categories : <span class="attribute">{{ product.name}}</span></h6>
     <h6 class="flex-wrap" style="width:75%;">Brand : <span class="attribute"> Lenovo</span></h6>
 
   </div>

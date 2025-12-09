@@ -11,8 +11,8 @@ const routes: Routes = [
       { path: '', redirectTo: 'tableProducts', pathMatch: 'full' },//default path
       { path: 'tableProducts', component: TableProductComponent },
       { path: 'tableUsers', component: TableUsersComponent },
-      { path: 'createProoduct', component: FormProductComponent },
-      { path: 'editeProduct/:productID', component: FormProductComponent },
+      { path: 'createProduct', component: FormProductComponent },
+      { path: 'editProduct/:productID', component: FormProductComponent },
     ]
   },
 ];

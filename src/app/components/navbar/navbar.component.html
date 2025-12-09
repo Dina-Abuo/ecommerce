@@ -1,50 +1,59 @@
-<div class="container-fluid">
-<div class="row justify-content-center p-3  content-header">
-  <div class="col-2 pt-2 ">
-    <div class="d-flex justify-content-evenly align-items-center">
-      <i class="fa-solid fa-bars"></i>
-      <a class="navbar-brand" routerLink="/home" style="width: 130px;">
-        <img src="assets/Logo-jumia.png" alt="" class="img-fluid">
-      </a>
-    </div>
-  </div>
-  <div class="col-5">
-    <form class="d-flex" role="search">
-      <div class="d-flex me-2 searchInput ">
-        <i class="fa-solid fa-magnifying-glass ms-2" style="color: #a3a3a6;"></i>
-        <input class="form-control" type="text" placeholder=" Search products, brands and categories "
-          aria-label="Search">
+<div class="top-nav" id="my-top-nav">
+  <!-- Logo -->
+  <a class="navbar-brand" routerLink="/home" style="width: 130px">
+    <img src="assets/Logo-jumia.png" class="img-fluid" />
+  </a>
+
+  <!-- Search -->
+  <div class="content-search col-5">
+    <form class="d-flex">
+      <div class="searchInput me-2">
+        <i class="fa-solid fa-magnifying-glass ms-2" style="color: #a3a3a6"></i>
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Search products, brands and categories"
+        />
       </div>
-      <button class="btn" type="submit">SEARCH</button>
+      <button class="btn">SEARCH</button>
     </form>
   </div>
-  <div [ngClass]="isUserLogged ?'col-3 pt-2' :'col-4 pt-2' ">
-    <ul class="d-flex  justify-content-evenly  nav-list">
-      <li class="nav-item d-flex align-items-center" [hidden]="isUserLogged">
-        <a class="nav-link " [hidden]="isUserLogged" aria-current="page" routerLink="/signUp" routerLinkActive="active">
-          <i class="fa-solid fa-user-plus  me-1"></i>
-          Sing up</a>
+
+  <!-- Links -->
+  <div class="content-link">
+    <ul class="nav-link">
+      <li class="nav-item">
+        <a routerLink="/dashBoard" routerLinkActive="active">Dashboard</a>
       </li>
-      <li class="nav-item  d-flex align-items-center" [hidden]="isUserLogged">
-        <a class="nav-link" [hidden]="isUserLogged" aria-current="page" routerLink="/login" routerLinkActive="active">
-          <i class="fa-solid fa-arrow-right-to-bracket me-1"></i>
-          Login</a>
+
+      <li class="nav-item">
+        <a routerLink="/cart" routerLinkActive="active">
+          <i class="fa-solid fa-cart-shopping me-1"></i> Cart
+        </a>
       </li>
-      <li class="nav-item d-flex align-items-center" [hidden]="!isUserLogged">
-        <a class="nav-link " (click)="logout()" [hidden]="!isUserLogged" aria-current="page" routerLink="/logout"
-          routerLinkActive="active">
-          <i class="fa-solid fa-arrow-right-to-bracket me-1"></i>
-          Logout</a>
+      
+      <li class="nav-item" [hidden]="isUserLogged">
+        <a routerLink="/signUp" routerLinkActive="active">
+          <i class="fa-solid fa-user-plus me-1"></i> Sign up
+        </a>
       </li>
-      <li class="nav-item  d-flex align-items-center">
-        <a class="nav-link " aria-current="page" routerLink="/dashBoard" routerLinkActive="active">
-          DashBoard</a>
+
+      <li class="nav-item" [hidden]="isUserLogged">
+        <a routerLink="/login" routerLinkActive="active">
+          <i class="fa-solid fa-arrow-right-to-bracket me-1"></i> Login
+        </a>
       </li>
-      <li class="nav-item  d-flex align-items-center">
-        <a class="nav-link" aria-current="page" routerLink="/cart" routerLinkActive="active">
-          <i class="fa-solid fa-cart-shopping me-1"></i>Cart</a>
+
+      <li class="nav-item" [hidden]="!isUserLogged">
+        <a (click)="logout()" routerLinkActive="active">
+          <i class="fa-solid fa-arrow-right-from-bracket me-1"></i> Logout
+        </a>
       </li>
     </ul>
   </div>
-</div>
+
+  <!-- Mobile Icon -->
+  <div class="content-icon">
+    <i class="fa fa-bars" (click)="myFunction()"></i>
+  </div>
 </div>

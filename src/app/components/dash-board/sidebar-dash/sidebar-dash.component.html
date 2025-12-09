@@ -5,14 +5,14 @@
     <nav class="sidebar-nav">
       <ul id="sidebarnav">
         <!-- User Profile-->
-        <li class="sidebar-item p-sm-2 rounded" routerLinkActive="active"> <a routerLink="/dashBoard"><span
-              class="hide-menu">Dashboard</span></a></li>
-        <li class="sidebar-item p-sm-2 rounded" routerLinkActive="active"> <a routerLink="/dashBoard/tableUsers"><span
-              class="hide-menu">Users Table </span></a></li>
-        <li class="sidebar-item p-sm-2 rounded" routerLinkActive="active"> <a
+        <li class="sidebar-item p-sm-2 rounded" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> <a
+            routerLink="/dashBoard"><span class="hide-menu">Dashboard</span></a></li>
+        <li class="sidebar-item p-sm-2 rounded" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> <a
+            routerLink="/dashBoard/tableUsers"><span class="hide-menu">Users Table </span></a></li>
+        <li class="sidebar-item p-sm-2 rounded" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> <a
             routerLink="/dashBoard/tableProducts"><span class="hide-menu">Products Table</span></a></li>
-        <li class="sidebar-item p-sm-2 rounded" routerLinkActive="active"> <a
-            routerLink="/dashBoard/createProoduct"><span class="hide-menu">Products Table</span></a></li>
+        <li class="sidebar-item p-sm-2 rounded" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> <a
+            routerLink="/dashBoard/createProduct"><span class="hide-menu">Products Table</span></a></li>
       </ul>
     </nav>
     <!-- End Sidebar navigation -->

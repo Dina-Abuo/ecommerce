@@ -1,17 +1,17 @@
 <app-slider></app-slider>
 
 <div class="row">
-  <div class="col-4 rounded p-3" style="position: relative; " *ngFor="let cat of categroy; let i = index "> <a
-      [routerLink]="['/grous-products',cat.id]"> <img src="assets/categroies/categroy{{i+1}}.png"
+  <div class="col-4 rounded p-3" style="position: relative; " *ngFor="let cat of category; let i = index "> <a
+      [routerLink]="['/groups-products',cat.id]"> <img src="assets/categroies/categroy{{i+1}}.png"
         class="img-fluid rounded " alt="images"></a>
     <span class="cateName"> {{cat.name}}</span>
   </div>
 </div>
 
-<div class="row mt-sm-2 mb-sm-2 p-sm-4" *ngFor="let cat of categroy; let i = index">
+<div class="row mt-sm-2 mb-sm-2 p-sm-4" *ngFor="let cat of category; let i = index">
   <h2 class="cartegroyName mb-sm-2">{{cat.name}} </h2>
   <ng-container *ngFor="let product of products">
-    <div class="productCard" *ngIf="product.cateogryID==cat.id ">
+    <div class="productCard" *ngIf="product.categoryID==cat.id ">
       <div class="cardProduct rounded border">
         <div class="imgProduct">
           <a [routerLink]="['/products',product.id]">

@@ -1,34 +1,38 @@
-.div-left {
+section {
+  height: 90vh;
+}
+
+.login-div {
   margin: auto;
   background-color: var(--white-color);
   height: 450px;
 }
 
-.div-left h4 {
+.login-div h4 {
   text-align: center;
   color: var(--orange-color);
 }
 
-.div-left .login {
+.login-div .login-form {
   width: 100%;
 }
 
-.perant-input1,
-.perant-input2 {
+.parent-input1,
+.parent-input2 {
   width: 100%;
   position: relative;
 }
 
-.perant-input1 input,
-.perant-input2 input {
+.parent-input1 input,
+.parent-input2 input {
   width: 100%;
   background-color: var(--white-color);
   border: 1px solid #ccc;
   padding: 13px;
 }
 
-.perant-input1 label,
-.perant-input2 label {
+.parent-input1 label,
+.parent-input2 label {
   position: absolute;
   background-color: var(--white-color);
   top: -13px;
@@ -36,60 +40,14 @@
   color: gray;
 }
 
-.perant-input2 input:focus-visible,
-.perant-input1 input:focus-visible {
+.parent-input2 input:focus-visible,
+.parent-input1 input:focus-visible {
   outline-color: var(--orange-color);
 }
 
-.perant-input2:focus-visible+label {
+.parent-input2:focus-visible+label {
   color: var(--orange-color);
 }
-
-/* .div-check-forget {
-  width: 85%;
-  height: 45px;
-}
-
-.input-check {
-  width: 45px;
-  height: 45px;
-}
-
-.input-check:hover {
-  background-color: #ffe6cd;
-}
-
-
-.input-check .form-check-input {
-  border: 2px solid rgb(200, 193, 193);
-  width: 20px;
-  height: 20px;
-  outline: 0;
-}
-
-.form-check-input:checked {
-  background-color: var(--color-orange);
-  border-color: var(--color-orange);
-}
-
-.form-check-input:focus {
-  border-color: none;
-  outline: 0;
-  box-shadow: none;
-}
-
-
-.link_forget {
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--color-orange);
-}
-
-.link_forget :hover {
-  text-decoration: underline;
-  color: var(--color-orange);
-} */
 
 .div-subm {
   width: 90%;
@@ -119,7 +77,7 @@
   background-color: var(--orange-color);
 }
 
-.div-signup {
+.div-signUp {
   width: 90%;
   margin: auto;
   height: 45px;
@@ -129,21 +87,22 @@
   text-align: center;
 }
 
-.div-signup:hover,
-.div-signup a:hover {
+.div-signUp:hover,
+.div-signUp a:hover {
   background-color: var(--orange-color);
 }
 
-.div-signup a {
+.div-signUp a {
   display: inline-block;
   color: var(--white-color);
   text-decoration: none;
 }
 
-.div-left p{
+.login-div p {
   width: 100%;
   text-align: center;
 }
-.div-left p a {
+
+.login-div p a {
   color: var(--orange-color);
 }

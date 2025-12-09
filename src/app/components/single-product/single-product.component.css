@@ -4,7 +4,7 @@
 }
 
 .des {
-  color: var(--darck-gray--color);
+  color: var(--dark-gray--color);
   margin-bottom: 20px;
 }
 
@@ -65,6 +65,6 @@
 }
 
 .attribute {
-  color: var(--darck-gray--color);
+  color: var(--dark-gray--color);
   font-weight: 400;
 }

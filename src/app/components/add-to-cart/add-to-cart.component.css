@@ -1,9 +1,5 @@
 .section1 {
-  margin: auto;
-  background-color: var(--white-color);
-  border: 1 solid #eee;
-  border-radius: 5px;
-  height: 350px;
+  height: 90vh;
 }
 
 .div-link-shopping {
@@ -29,34 +25,11 @@
 
 }
 
-.total-price {
-  background-color: var(--white-color);
-  height: 160px;
-}
-
-.checkout {
-  border: none;
-  color: var(--white-color);
-  background-color: var(--orange-color-light);
-  height: 50px;
-  font-weight: 600;
-}
-
-.checkout:hover {
-  background-color: var(--orange-color);
-}
-
+/********************  section 2 *************************/
 
 .div-image {
   width: 80px;
-
 }
-
-
-
-
-
-
 
 .btn-delete {
   background-color: var(--white-color);
@@ -100,6 +73,55 @@
 
 .plus {
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   right: -10px;
+}
+
+
+.total-price {
+  background-color: var(--white-color);
+  height: 200px;
+}
+
+.checkout {
+  border: none;
+  color: var(--white-color);
+  background-color: var(--orange-color-light);
+  height: 50px;
+  font-weight: 600;
+}
+
+.checkout:hover {
+  background-color: var(--orange-color);
+}
+
+@media (max-width:767px) {
+
+  .product-name,
+  .available-quantity p,
+  .total-price p {
+    font-size: 10px;
+  }
+
+  .product-price h4 {
+    font-size: 14px;
+  }
+
+  .btn-delete {
+    font-size: 13px;
+  }
+
+  .total-price h5 {
+    font-size: 13px;
+  }
+
+  .total-price h6 {
+    font-size: 12px;
+  }
+
+
+  .checkout {
+    font-size: 13px;
+  }
+
 }

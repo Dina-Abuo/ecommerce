@@ -5,42 +5,60 @@ import { AddToCartService } from 'src/app/Service/add-to-cart.service';
 @Component({
   selector: 'app-add-to-cart',
   templateUrl: './add-to-cart.component.html',
-  styleUrls: ['./add-to-cart.component.css']
+  styleUrls: ['./add-to-cart.component.css'],
 })
 export class AddToCartComponent implements OnInit {
-  value: number = 1;
   cartItems: CartItem[] = [];
-  count: number = 0;
-  constructor(private addToCartService: AddToCartService) {
+  totalPrice: number = 0;
 
+  constructor(private addToCartService: AddToCartService) {}
 
-  }
   ngOnInit(): void {
-    this.count = this.cartItems.length;
-    if (localStorage.getItem("cartItems"))
-      this.cartItems = JSON.parse(localStorage.getItem("cartItems")!)
+    if (localStorage.getItem('cartItems')) {
+      this.addToCartService.cardItems = JSON.parse(
+        localStorage.getItem('cartItems')!
+      );
+      this.cartItems = this.addToCartService.cardItems;
+      this.calculateTotalPrice();
+    }
   }
+
   remove(index: number) {
-    this.cartItems.splice(index, 1)
-    return this.cartItems
+    this.addToCartService.cardItems.splice(index, 1);
+    this.cartItems = this.addToCartService.cardItems;
+    localStorage.setItem('cartItems', JSON.stringify(this.cartItems));
+    // تحديث السعر الكلي بعد الحذف
+    this.calculateTotalPrice();
+    return this.cartItems;
   }
 
-
-
-
-
-
-
-  minus(val: any) {
-    this.value = +val;
-    if (this.value > 1) {
-      this.value--;
+  minus(item: CartItem) {
+    if (item.quantity > 1) {
+      item.quantity--;
+      this.updateItemPrice(item);
+      // إعادة حساب السعر الكلي
+      this.calculateTotalPrice();
+      localStorage.setItem('cartItems', JSON.stringify(this.cartItems));
     }
   }
-  plus(val: any) {
-    this.value = +val;
-    if (this.value < 9) {
-      this.value++;
+
+  plus(item: CartItem) {
+    if (item.quantity < 9) {
+      item.quantity++;
+      this.updateItemPrice(item);
+      this.calculateTotalPrice();
+      localStorage.setItem('cartItems', JSON.stringify(this.cartItems));
     }
+  }
+
+  updateItemPrice(item: CartItem) {
+    item.totalPrice = item.price * item.quantity;
+  }
+
+  calculateTotalPrice() {
+    this.totalPrice = this.cartItems.reduce(
+      (acc, item) => acc + item.price * item.quantity,
+      0
+    );
   }
 }

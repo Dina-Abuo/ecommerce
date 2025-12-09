@@ -16,7 +16,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full' },//default path
       { path: 'home', component: HomeComponent },
       { path: 'cart', component: AddToCartComponent },
-      { path: 'grous-products/:categroyID', component: GroupsComponent },
+      { path: 'groups-products/:categoryID', component: GroupsComponent },
       { path: 'products/:id', component: SingleProductComponent },
       { path: 'login', component: LoginComponent },
       { path: 'signUp', component: SignUPComponent },

@@ -2,22 +2,19 @@ import { Injectable } from '@angular/core';
 import { ICategory } from '../Models/icategory';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class CategroyService {
-  private categroies: ICategory[];
+export class CategoryService {
+  private categories: ICategory[];
   constructor() {
-    this.categroies = [
+    this.categories = [
       { id: 1, name: 'Accessories' },
       { id: 2, name: 'Laptops' },
-      { id: 3, name: 'Phones' }
+      { id: 3, name: 'Phones' },
     ];
   }
 
-  getAllCategroies(): ICategory[] {
-    return this.categroies
+  getAllCategories(): ICategory[] {
+    return this.categories;
   }
-
-
-
 }

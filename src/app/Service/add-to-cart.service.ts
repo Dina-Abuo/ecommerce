@@ -5,6 +5,6 @@ import { CartItem } from '../Models/cartItem';
   providedIn: 'root'
 })
 export class AddToCartService {
-  cardIems: CartItem[] = [];
+  cardItems: CartItem[] = [];
   constructor() { }
 }
