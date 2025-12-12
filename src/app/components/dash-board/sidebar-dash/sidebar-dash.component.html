@@ -1,18 +1,72 @@
-<aside class="sidebar col-2 p-sm-3  shadow">
+<button class="menu-toggle d-md-none" (click)="toggleSidebar()">
+  <i class="fas fa-bars"></i> القائمة
+</button>
+
+<!-- Overlay of mobil -->
+<div
+  class="sidebar-overlay"
+  [class.show]="isSidebarOpen"
+  (click)="closeSidebar()"
+></div>
+
+<!-- Sidebar -->
+<aside class="sidebar col-2 p-sm-3 shadow" [class.show]="isSidebarOpen">
   <!-- Sidebar scroll-->
   <div class="scroll-sidebar">
+    <button
+      class="close-btn d-md-none"
+      (click)="closeSidebar()"
+      style="
+        float: right;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+      "
+    >
+      <i class="fa-solid fa-x"></i>
+    </button>
+
     <!-- Sidebar navigation-->
     <nav class="sidebar-nav">
-      <ul id="sidebarnav">
-        <!-- User Profile-->
-        <li class="sidebar-item p-sm-2 rounded" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> <a
-            routerLink="/dashBoard"><span class="hide-menu">Dashboard</span></a></li>
-        <li class="sidebar-item p-sm-2 rounded" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> <a
-            routerLink="/dashBoard/tableUsers"><span class="hide-menu">Users Table </span></a></li>
-        <li class="sidebar-item p-sm-2 rounded" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> <a
-            routerLink="/dashBoard/tableProducts"><span class="hide-menu">Products Table</span></a></li>
-        <li class="sidebar-item p-sm-2 rounded" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"> <a
-            routerLink="/dashBoard/createProduct"><span class="hide-menu">Products Table</span></a></li>
+      <h1
+        class=""
+        style="color: var(--color-font-dashboard)"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <a routerLink="/dashBoard" (click)="closeSidebar()">
+          <span class="hide-menu">Dashboard</span>
+        </a>
+      </h1>
+      <ul id="menubar">
+        <li
+          class="sidebar-item p-sm-2 rounded"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="/dashBoard/tableUsers" (click)="closeSidebar()">
+            <span class="hide-menu">Users Table</span>
+          </a>
+        </li>
+        <li
+          class="sidebar-item p-sm-2 rounded"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="/dashBoard/tableProducts" (click)="closeSidebar()">
+            <span class="hide-menu">Products Table</span>
+          </a>
+        </li>
+        <li
+          class="sidebar-item p-sm-2 rounded"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="/dashBoard/createProduct" (click)="closeSidebar()">
+            <span class="hide-menu">Create Product</span>
+          </a>
+        </li>
       </ul>
     </nav>
     <!-- End Sidebar navigation -->
